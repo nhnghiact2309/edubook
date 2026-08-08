@@ -93,3 +93,6 @@ app.listen(port, function () {
 
 // Add this at the absolute bottom of app.js:
 module.exports = app;
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); // or pug, hbs, etc.
