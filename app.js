@@ -4,6 +4,11 @@ const port = 3000
 const path = require('path')
 const eLayout = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
+const path = require('path');
+
+// Đảm bảo đường dẫn luôn trỏ đúng thư mục views bất kể chạy ở đâu
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); // Hoặc template engine tao với mày đang dùng
 
 
 // sử dụng cookie
