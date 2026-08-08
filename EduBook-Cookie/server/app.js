@@ -4,6 +4,9 @@ const port = 3000
 const path = require('path')
 const eLayout = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 
 // sử dụng cookie
