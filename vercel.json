@@ -1,29 +1,11 @@
 {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+{
   "version": 2,
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.js"
-    }
-  ],
-  "includeFiles": [
-    "views/**"
-  ],
-  {
-  "functions": {
-    "api/**/*.js": {
-      "includeFiles": "views/**"
-    },
-    "app.js": {
-      "includeFiles": "views/**"
-    }
-  }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
 }
-}
-
