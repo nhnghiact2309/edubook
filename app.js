@@ -5,6 +5,13 @@ const path = require('path')
 const eLayout = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const path = require('path');
+const express = require('express');
+const path = require('path'); // Chỉ để duy nhất 1 dòng này ở đầu file
+const app = express();
+
+// Các cấu hình view engine (nếu có)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); // Hoặc pug, hbs... tùy dự án của bạn
 
 // Đảm bảo đường dẫn luôn trỏ đúng thư mục views bất kể chạy ở đâu
 app.set('views', path.join(__dirname, 'views'));
