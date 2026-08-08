@@ -14,5 +14,16 @@
   ],
   "includeFiles": [
     "views/**"
-  ]
+  ],
+  {
+  "functions": {
+    "api/**/*.js": {
+      "includeFiles": "views/**"
+    },
+    "app.js": {
+      "includeFiles": "views/**"
+    }
+  }
 }
+}
+
