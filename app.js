@@ -88,3 +88,8 @@ app.get('/index.html', (req, res, next) => {
 app.listen(port, function () {
     console.log(`Đang chạy app tại: http://localhost:${port}`)
 })
+// Remove or comment out this:
+// app.listen(3000);
+
+// Add this at the absolute bottom of app.js:
+module.exports = app;
